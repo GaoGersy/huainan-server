@@ -1,0 +1,44 @@
+<!DOCTYPE html><html><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name=format-detection content="telphone=no, email=no"><meta name=apple-touch-fullscreen content=yes><meta name=apple-mobile-web-app-capable content=yes><title>订单详情</title><link href=../../css/common.css rel=stylesheet type=text/css><link href=../../css/shadow.css rel=stylesheet type=text/css><script type=text/javascript src=../../js/lib/webapp/fix.js></script><link rel=stylesheet href=../../js/lib/plugin/area/css/LArea.css><style type=text/css>
+    * {
+        margin: 0;
+        padding: 0;
+        -webkit-appearance: none; //去掉浏览器默认样式
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-touch-callout: none;
+        box-sizing: border-box;
+    }
+    
+    html,
+    body {
+        margin: 0 auto;
+        width: 100%;
+        min-height: 100%;
+        overflow-x: hidden;
+        -webkit-user-select: none;
+    }
+    
+    body {
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        -webkit-text-size-adjust: 100%; //关闭自动调整字体
+        -webkit-overflow-scrolling: touch;
+        overflow-scrolling: touch;
+    }
+    
+    input {
+        width: 90%;
+        height: 40px;
+        font-size: 18px;
+        border: 1px solid #b72f20;
+        border-radius: 5px;
+        margin: 20px 5% 0 5%;
+        padding: 5px;
+    }
+    
+    h1 {
+        background-color: #b72f20;
+        color: #fff;
+        font-size: 25px;
+        text-align: center;
+        padding: 10px;
+    }
+    </style></head><body><div id=app class="order-detail scroll"><div><h1>LArea</h1><div class=content-block><input id=demo1 type=text readonly placeholder=城市选择特效 value=广东省,深圳市,南山区> <input id=value1 type=hidden value=20,234,504></div><div class=content-block><input id=demo2 type=text readonly placeholder=城市选择特效> <input id=value2 type=hidden></div></div></div></body><script type=text/javascript data-main=../../js/dev/order/area src=../../js/lib/requirejs/require.js defer async></script></html>

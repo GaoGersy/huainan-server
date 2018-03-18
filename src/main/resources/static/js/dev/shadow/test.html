@@ -1,0 +1,19 @@
+<!DOCTYPE html><html><head><meta http-equiv=content-type content="text/html; charset=utf-8"><meta name=keywords content=天地图><title>天地图－地图API－范例－地图放大和缩小</title><script type=text/javascript src="http://api.tianditu.com/api?v=4.0"></script><script type=text/javascript data-main=../../js/dev/shadow/position src=../../js/lib/requirejs/require.js defer async></script><script>
+
+      var map;
+
+      var zoom = 12;
+
+      function onLoad() {
+
+          //初始化地图对象
+
+          map = new T.Map("mapDiv");
+
+          //设置显示地图的中心点和级别
+
+          map.centerAndZoom(new T.LngLat(116.40969, 39.89945), zoom);
+
+      }
+
+  </script></head><body onload=onLoad()><div id=mapDiv style="position:absolute;width:600px; height:500px"></div><div style=position:absolute;left:620px;><input type=button id=button1 onclick=map.zoomIn() value=放大地图> <input type=button id=button2 onclick=map.zoomOut() value=缩小地图><ul><li>本示例演示初地图的放大和缩小。</li><p><a href=http://lbs.tianditu.com/api-new/html5/examples.html>返回所有范例列表</a></p></ul></div></body></html>

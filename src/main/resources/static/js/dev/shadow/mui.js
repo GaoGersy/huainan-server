@@ -1,0 +1,1 @@
+require(["../../requireconfig"],function(){require(["zepto","vue","vue-resource","layer","global","map","mui"],function(e,i,n,u,t,o,r){({init:function(){var e=this;i.use(n),e.index=new i({el:"#app",data:{},methods:{},mounted:function(){}})}}).init()})});

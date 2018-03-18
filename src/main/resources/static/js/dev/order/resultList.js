@@ -1,0 +1,1 @@
+require(["../../requireconfig"],function(){require(["zepto","vue","vue-resource","layer","global"],function(e,n,i,o,t){({init:function(){var e=this;n.use(i),e.index=new n({el:"#searchResult",data:{},methods:{getOrder:function(){window.location.href="./orderList.html"}},mounted:function(){console.log("地图搜索")}})}}).init()})});
