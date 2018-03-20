@@ -5,7 +5,8 @@
 	<artifactId>huainan-server</artifactId>
 	<version>1.0</version>
 	<!--<name>base-spring-boot</name>-->
-	<packaging>jar</packaging>
+	<!--<packaging>jar</packaging>-->
+	<packaging>war</packaging>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -76,7 +77,9 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
-		</dependency>
+			<!--添加后会在war中打入tomcat-->
+            <!--<scope>provided</scope>-->
+        </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-aop</artifactId>

@@ -5,7 +5,7 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-		share_url , webview_url , title, feed_id
+		shareUrl , webviewUrl , title, feedId
 	</sql>
 
     <delete id="deleteAll">

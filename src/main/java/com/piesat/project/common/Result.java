@@ -126,12 +126,8 @@ public class Result {
         return error("没有找到相应的数据", DATA_NOT_FOUND);
     }
 
-    public Result success(Object data) {
-        this.result = SUCCESS;
-        this.error = "";
-        this.data = data;
-        this.code = SUCCESS_CODE;
-        return this;
+    public static Result success(Object data) {
+        return new Result(SUCCESS, data);
     }
 
     public Result exception(Exception e) {

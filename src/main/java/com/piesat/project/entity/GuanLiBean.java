@@ -7,18 +7,18 @@ import com.baomidou.mybatisplus.annotations.TableName;
 @TableName("guan_li")
 public class GuanLiBean {
     @TableId
-    private Long feed_id;
+    private Long feedId;
     private String title;
-    private String webview_url;
-    private String share_url;
+    private String webviewUrl;
+    private String shareUrl;
     private String summary;
 
-    public Long getFeed_id() {
-        return feed_id;
+    public Long getFeedId() {
+        return feedId;
     }
 
-    public void setFeed_id(Long feed_id) {
-        this.feed_id = feed_id;
+    public void setFeedId(Long feedId) {
+        this.feedId = feedId;
     }
 
     public String getTitle() {
@@ -29,20 +29,20 @@ public class GuanLiBean {
         this.title = title;
     }
 
-    public String getWebview_url() {
-        return webview_url;
+    public String getWebviewUrl() {
+        return webviewUrl;
     }
 
-    public void setWebview_url(String webview_url) {
-        this.webview_url = webview_url;
+    public void setWebviewUrl(String webviewUrl) {
+        this.webviewUrl = webviewUrl;
     }
 
-    public String getShare_url() {
-        return share_url;
+    public String getShareUrl() {
+        return shareUrl;
     }
 
-    public void setShare_url(String share_url) {
-        this.share_url = share_url;
+    public void setShareUrl(String shareUrl) {
+        this.shareUrl = shareUrl;
     }
 
     public String getSummary() {

@@ -1,5 +1,6 @@
 package com.piesat.project.controller;
 
+import com.baomidou.mybatisplus.plugins.Page;
 import com.piesat.project.common.Result;
 import com.piesat.project.common.controller.BaseController;
 import com.piesat.project.common.utils.SuperLogger;
@@ -10,7 +11,9 @@ import com.piesat.project.service.IGuanLiService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
@@ -26,7 +29,7 @@ public class LoadDataController extends BaseController {
 
     long num = 100000000L;
 
-    @RequestMapping(value = "syncData")
+    @GetMapping(value = "/syncData")
     public Result syncData() {
         while (num < 10000000000L) {
             OkHttpUtils.get(url + (num++), new OkHttpUtils.ResultCallback() {
@@ -36,7 +39,7 @@ public class LoadDataController extends BaseController {
                     List<GuanLiBean> list = listDataBean.getData().getList();
                     SuperLogger.e(list);
                     for (GuanLiBean guanLiBean : list) {
-                        GuanLiBean bean = mGuanLiService.selectById(guanLiBean.getFeed_id());
+                        GuanLiBean bean = mGuanLiService.selectById(guanLiBean.getFeedId());
                         if (bean==null) {
                             SuperLogger.e("准备入库了");
                             mGuanLiService.insert(guanLiBean);
@@ -53,5 +56,11 @@ public class LoadDataController extends BaseController {
             });
         }
         return Result.success("同步成功");
+    }
+
+    @PostMapping(value = "/getDataListByPage")
+    public Result getDataListByPage(@RequestBody Page page) {
+        Page page1 = mGuanLiService.selectPage(page);
+        return Result.success(page1);
     }
 }

@@ -1,6 +1,6 @@
 #app
 server:
-    port: 8080
+    port: 80
 
 #spring
 spring:
@@ -35,9 +35,9 @@ spring:
   datasource:
       type: com.alibaba.druid.pool.DruidDataSource
       driverClassName: com.mysql.jdbc.Driver
-      url: jdbc:mysql://127.0.0.1:3306/huainan?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+      url: jdbc:mysql://193.112.43.82:3306/huainan?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
       username: root
-      password: root
+      password: root123456
       initialSize: 1
       minIdle: 3
       maxActive: 20
@@ -73,7 +73,7 @@ mybatis-plus:
     #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
     field-strategy: 2
     #驼峰下划线转换
-    db-column-underline: true
+    db-column-underline: false
     #刷新mapper 调试神器
     refresh-mapper: true
     #数据库大写下划线转换
